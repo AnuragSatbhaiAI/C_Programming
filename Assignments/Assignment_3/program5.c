@@ -1,0 +1,86 @@
+//////////////////////////////////////////////////////////////////////////////////////////
+//
+//  5.Accept one character from user and check whether that character is vowel or not.
+//    (a,e,i,o,u)
+//
+//  Input : E       Output : TRUE
+//  Input : d       Output : FALSE
+//
+//////////////////////////////////////////////////////////////////////////////////////////
+
+//////////////////////////////////////////////////////////////////////////////////////////
+//
+//  Required header file
+//
+//////////////////////////////////////////////////////////////////////////////////////////
+
+#include <stdio.h>
+#include <stdbool.h>
+
+//////////////////////////////////////////////////////////////////////////////////////////
+//
+//  Function Name : ChkVowel
+//  Description   : It checks whether the entered character is a vowel or not.
+//  Input         : char
+//  Output        : char
+//  Author        : Anurag Gopal Satbhai
+//  Date          : 26/10/25
+//
+//////////////////////////////////////////////////////////////////////////////////////////
+
+bool ChkVowel(char cValue)
+{
+    if( cValue == 'a' || cValue == 'A' ||
+        cValue == 'e' || cValue == 'E' ||
+        cValue == 'i' || cValue == 'I' ||
+        cValue == 'o' || cValue == 'O' ||
+        cValue == 'u' || cValue == 'U'      )
+
+    {
+        return true;
+    }
+    else 
+    {
+        return false;
+    }
+
+}
+
+//////////////////////////////////////////////////////////////////////////////////////////
+//
+//  Entry point function for the application
+//
+//////////////////////////////////////////////////////////////////////////////////////////
+
+int main()
+{
+
+    char cValue = '\0';
+    bool bRet = false;
+
+    printf("Enter Character : ");
+    scanf("%c",&cValue);
+
+    bRet = ChkVowel(cValue);
+
+    if(bRet == true)
+    {
+        printf("It is Vowel");
+    }
+    else
+    {
+        printf("It is not vowel");
+    }
+
+    return 0;
+}
+
+//////////////////////////////////////////////////////////////////////////////////////////
+//
+//      INPUT 1                                      OUTPUT 
+//
+//       a                                             It is vowel
+//       t                                             It is not vowel   
+//       r                                             It is not vowel
+//
+//////////////////////////////////////////////////////////////////////////////////////////

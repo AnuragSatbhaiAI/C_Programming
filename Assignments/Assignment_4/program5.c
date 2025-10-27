@@ -1,0 +1,93 @@
+//////////////////////////////////////////////////////////////////////////////////////////
+//
+//  5. Write a program which accept number from user and return  difference between 
+//     summation of all its factors and non-factors. 
+//
+//      Input  : 12
+//      Output : -34     (16 - 50)
+//
+//
+//////////////////////////////////////////////////////////////////////////////////////////
+
+//////////////////////////////////////////////////////////////////////////////////////////
+//
+//  Required header file
+//
+//////////////////////////////////////////////////////////////////////////////////////////
+
+#include <stdio.h>
+
+//////////////////////////////////////////////////////////////////////////////////////////
+//
+//  Function Name : FactDiff
+//  Description   : It returns the diff of sum of factors and non-factors of number.
+//  Input         : int
+//  Output        : int
+//  Author        : Anurag Gopal Satbhai
+//  Date          : 27/10/25
+//
+//////////////////////////////////////////////////////////////////////////////////////////
+
+int FactDiff(int iNo)
+{
+
+    int iCnt = 0;
+    int iSumNonFact = 0;
+    int iSumFact = 0;
+    int iFactDiff = 0;
+
+    if(iNo < 0)                                    // Updator
+    {
+        iNo = -iNo;
+    }
+
+
+    for(iCnt = 1; iCnt < iNo; iCnt++)               // Business Logic
+    {
+        if((iNo % iCnt) == 0)
+        {
+            iSumFact = iSumFact + iCnt;
+        }
+
+        else
+        //((iNo % iCnt) != 0)
+        {
+            iSumNonFact = iSumNonFact + iCnt;
+        }
+    }
+
+    iFactDiff = iSumFact - iSumNonFact;
+
+    return iFactDiff;
+
+}       // Time Complexity = O(n)
+
+//////////////////////////////////////////////////////////////////////////////////////////
+//
+//  Entry point function for the application
+//
+//////////////////////////////////////////////////////////////////////////////////////////
+
+int main()
+{
+
+    int iValue = 0;
+    int iRet = 0;
+
+    printf("Enter number : ");
+    scanf("%d",&iValue);
+
+    iRet = FactDiff(iValue);
+
+    printf("%d",iRet);
+
+    return 0;
+}
+
+//////////////////////////////////////////////////////////////////////////////////////////
+//
+//      INPUT 1                                      OUTPUT 
+//
+//       12                                            -34
+//
+//////////////////////////////////////////////////////////////////////////////////////////

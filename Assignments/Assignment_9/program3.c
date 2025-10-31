@@ -1,0 +1,81 @@
+//////////////////////////////////////////////////////////////////////////////////////////
+//
+//  3.Write a program to find even factorial of given number.
+//
+//  Input  : 5                                     -5
+//  Output : 8 (4 * 2)                              8 (4 * 2)                                                
+//
+//////////////////////////////////////////////////////////////////////////////////////////
+
+//////////////////////////////////////////////////////////////////////////////////////////
+//
+//  Required header file
+//
+//////////////////////////////////////////////////////////////////////////////////////////
+
+#include <stdio.h>
+
+//////////////////////////////////////////////////////////////////////////////////////////
+//
+//  Function Name : EvenFactorial
+//  Description   : It returns the even factorial of the given number.
+//  Input         : int
+//  Output        : Returns Even factorial
+//  Author        : Anurag Gopal Satbhai
+//  Date          : 31/10/25
+//
+//////////////////////////////////////////////////////////////////////////////////////////
+
+int EvenFactorial(int iNo)
+{
+
+    if(iNo < 0)                                  // Updater
+    {
+        iNo = - iNo;
+    }
+
+    int iCnt = 0;
+    int iFact = 1;
+
+    for(iCnt = iNo; iCnt >= 1; iCnt--)           // Business Logic
+    {   
+        if((iCnt % 2) == 0)
+        {
+            iFact = iFact * iCnt;
+        }
+    }
+
+    return iFact;
+    
+}   // Time Complexity = O(n)     
+
+//////////////////////////////////////////////////////////////////////////////////////////
+//
+//  Entry point function for the application
+//
+//////////////////////////////////////////////////////////////////////////////////////////
+
+int main()
+{
+
+    int iValue = 0, iRet = 0;
+
+    printf("Enter number : ");
+    scanf("%d",&iValue);
+
+    iRet = EvenFactorial(iValue);
+
+    printf("Even factorial of number is %d",iRet);
+
+    return 0;
+}
+
+//////////////////////////////////////////////////////////////////////////////////////////
+//
+//      INPUT                                      OUTPUT 
+//
+//      5                                           8        
+//     -5                                           8     
+//      10                                          3840
+//
+//////////////////////////////////////////////////////////////////////////////////////////

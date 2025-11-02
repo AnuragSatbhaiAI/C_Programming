@@ -1,7 +1,7 @@
 /////////////////////////////////////////////////////////////////////////////////////////
 //
-//  1.Write a program which accept range from user and display all numbers in between
-//    that range
+//  5.Write a program which accept range from user and display all numbers in between
+//    that range in reverse order.
 //
 //  Input  : 23  34                       
 //  Output : 34  33  32  31  30  29  28  27  26  25  24  23                                                                                         

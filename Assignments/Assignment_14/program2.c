@@ -1,0 +1,96 @@
+/////////////////////////////////////////////////////////////////////////////////////////
+//
+//  2.Write a program which accept number from user and check whether it contains 0
+//    or not.
+//      
+//    Input  : 2395                    1018                    9000  
+//    Output : There is no zero        It contains zero        It contains zero
+//
+//////////////////////////////////////////////////////////////////////////////////////////
+
+//////////////////////////////////////////////////////////////////////////////////////////
+//
+//  Required header file
+//
+//////////////////////////////////////////////////////////////////////////////////////////
+
+#include <stdio.h>
+
+#define TRUE 1
+#define FALSE 0
+
+typedef int BOOL;
+
+//////////////////////////////////////////////////////////////////////////////////////////
+//
+//  Function Name : ChkZeor
+//  Description   : Checks whether the given number contains zero or not.
+//  Input         : int
+//  Output        : bool
+//  Author        : Anurag Gopal Satbhai
+//  Date          : 02/11/25
+//
+//////////////////////////////////////////////////////////////////////////////////////////
+
+BOOL ChkZero(int iNo)
+{
+    int iDigit = 0;
+
+    if(iNo < 0)
+    {
+        iNo = -iNo;
+    }
+
+    while(iNo > 0)                                      // Business Logic
+    {
+        iDigit = iNo % 10 ;
+        if(iDigit == 0)
+        {
+            return TRUE;
+        }
+
+        iNo = iNo/10;
+    }
+
+    return FALSE;
+
+}   // Time Complexity = O(digits)     
+
+//////////////////////////////////////////////////////////////////////////////////////////
+//
+//  Entry point function for the application
+//
+//////////////////////////////////////////////////////////////////////////////////////////
+
+int main()
+{
+
+    int iValue = 0;
+    BOOL bRet = FALSE;
+
+    printf("Enter number : ");
+    scanf("%d",&iValue);
+
+    bRet = ChkZero(iValue);
+
+    if (bRet == TRUE)
+    {
+        printf("It contains zero");
+    }
+    else
+    {
+        printf("There is no zero");
+    }
+
+    return 0;
+}
+
+////////////////////////////////////////////////////////////////////////////////////////// 
+//
+//      Enter number : 8560
+//      It contains zero
+//
+//      Enter number : 2395
+//      There is no zero
+//
+//////////////////////////////////////////////////////////////////////////////////////////

@@ -1,0 +1,96 @@
+/////////////////////////////////////////////////////////////////////////////////////////
+//
+//  3.Write a program which accept number from user and return difference between
+//    summation of even digits and summation of odd digits.
+//      
+//    Input  : 2395           1018             8440              5733 
+//    Output : -15 (2-17)     6 (8-2)          10 (16-0)         -18 (0-18)
+//
+//////////////////////////////////////////////////////////////////////////////////////////
+
+//////////////////////////////////////////////////////////////////////////////////////////
+//
+//  Required header file
+//
+//////////////////////////////////////////////////////////////////////////////////////////
+
+#include <stdio.h>
+
+//////////////////////////////////////////////////////////////////////////////////////////
+//
+//  Function Name : CountDiff
+//  Description   : Returns the difference between summation of even and odd digits.
+//  Input         : int
+//  Output        : int
+//  Author        : Anurag Gopal Satbhai
+//  Date          : 02/11/25
+//
+//////////////////////////////////////////////////////////////////////////////////////////
+
+int CountDiff(int iNo)
+{
+    int iEven = 0, iOdd = 0;
+    int iDigit = 0;
+
+    if(iNo < 0)
+    {
+        iNo = -iNo;
+    }
+
+    while(iNo > 0)
+    {
+        iDigit = iNo % 10;
+
+        if((iDigit %2) == 0)
+        {
+            iEven = iEven + iDigit;
+        }
+        else
+        {
+            iOdd = iOdd + iDigit;
+        }
+    
+        iNo = iNo / 10;
+    }
+
+    return iEven - iOdd;
+
+
+}   // Time Complexity = O(digits)     
+
+//////////////////////////////////////////////////////////////////////////////////////////
+//
+//  Entry point function for the application
+//
+//////////////////////////////////////////////////////////////////////////////////////////
+
+int main()
+{
+
+    int iValue = 0, iRet = 0;
+
+    printf("Enter number : ");
+    scanf("%d",&iValue);
+
+    iRet = CountDiff(iValue);
+
+    printf("%d",iRet);
+
+    return 0;
+}
+
+////////////////////////////////////////////////////////////////////////////////////////// 
+//
+//      Enter number : 1018
+//      6
+//
+//      Enter number : 2395
+//      -15
+//
+//      Enter number : 8440
+//      16
+//
+//      Enter number : 5733
+//      -18
+//
+//////////////////////////////////////////////////////////////////////////////////////////

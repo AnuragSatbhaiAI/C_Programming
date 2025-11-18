@@ -1,6 +1,6 @@
 /////////////////////////////////////////////////////////////////////////////////////////
 //
-//  3.Write a program which accept number from user and count frequency of such a digits
+//  5.Write a program which accept number from user and count frequency of such a digits
 //    which are less than 6.
 //      
 //    Input  : 2395     1018       9440        96672 

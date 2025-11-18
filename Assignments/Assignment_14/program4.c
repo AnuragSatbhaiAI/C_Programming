@@ -1,6 +1,6 @@
 /////////////////////////////////////////////////////////////////////////////////////////
 //
-//  3.Write a program which accept number from user and count frequency of 4 in it.
+//  4.Write a program which accept number from user and count frequency of 4 in it.
 //      
 //    Input  : 2395     1018       9440       922432 
 //    Output : 0        0          2           1

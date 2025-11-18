@@ -1,6 +1,6 @@
 /////////////////////////////////////////////////////////////////////////////////////////
 //
-//  3.Write a program which accepts a number from user and returns the multiplication 
+//  4.Write a program which accepts a number from user and returns the multiplication 
 //    of all its digits.
 //      
 //    Input  : 2395     1018       9440        922432 

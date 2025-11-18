@@ -1,6 +1,6 @@
 /////////////////////////////////////////////////////////////////////////////////////////
 //
-//  3.Write a program which accept number from user and return the count of even digits.
+//  1.Write a program which accept number from user and return the count of even digits.
 //      
 //    Input  : 2395     1018      -1018        8462 
 //    Output : 1        2          2           4

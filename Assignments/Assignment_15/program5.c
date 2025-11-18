@@ -1,6 +1,6 @@
 /////////////////////////////////////////////////////////////////////////////////////////
 //
-//  3.Write a program which accept number from user and return difference between
+//  5.Write a program which accept number from user and return difference between
 //    summation of even digits and summation of odd digits.
 //      
 //    Input  : 2395           1018             8440              5733 

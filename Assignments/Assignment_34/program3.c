@@ -1,0 +1,96 @@
+/////////////////////////////////////////////////////////////////////////////////////////
+//
+//  3.Accept character from user if it is capital then display all the characters from
+//    the input characters till Z. if input character is small then print all the 
+//    characters in reverse order till a.in other case return directly.
+//
+//    Input  : Q       
+//
+//    Output : Q    R   S   T   U   V   W   X   Y   Z
+//
+//    Input  : m       
+//
+//    Output : m    l   k   j   i   h   g   f   e   d   c   b   a
+//
+//    Input  : 8       
+//
+//    Output : 
+//////////////////////////////////////////////////////////////////////////////////////////
+
+//////////////////////////////////////////////////////////////////////////////////////////
+//
+//  Required header file
+//
+//////////////////////////////////////////////////////////////////////////////////////////
+
+#include <stdio.h>
+
+
+//////////////////////////////////////////////////////////////////////////////////////////
+//
+//  Function Name : Display
+//  Description   : Display the alphabest till end .
+//  Input         : char
+//  Output        : NA
+//  Author        : Anurag Gopal Satbhai
+//  Date          : 07/12/25
+//
+//////////////////////////////////////////////////////////////////////////////////////////
+
+void Display(char ch)
+{
+    
+    if((ch >= 'a') && (ch <= 'z'))
+    {
+        while(ch != 'a')
+        {
+            printf("%c\t",ch);
+            ch--;
+        }
+        printf("%c\t",ch);
+    }
+    else if ((ch >= 'A') && (ch <= 'Z'))
+    {
+        while(ch != 'Z')
+        {
+            printf("%c\t",ch);
+            ch++;
+        }
+        printf("%c\t",ch);
+    }
+    else
+    {
+        return;
+    }
+
+}        
+
+//////////////////////////////////////////////////////////////////////////////////////////
+//
+//  Entry point function for the application
+//
+//////////////////////////////////////////////////////////////////////////////////////////
+
+int main()
+{
+    char cValue = '\0';
+
+    printf("Enter your character : \n");
+    scanf("%c",&cValue);
+    
+    Display(cValue);
+
+    return 0;
+}
+
+////////////////////////////////////////////////////////////////////////////////////////// 
+//
+//  Enter the character :
+//  g
+//  g       f       e       d       c       b       a
+//
+//  Enter the character :
+//  U
+//  U       V       W       X       Y       Z
+//
+//////////////////////////////////////////////////////////////////////////////////////////

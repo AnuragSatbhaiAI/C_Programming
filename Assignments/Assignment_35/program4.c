@@ -1,0 +1,93 @@
+/////////////////////////////////////////////////////////////////////////////////////////
+//
+//  4.Write a program which accept string from user and check whether it contains
+//    vowels in it or not.
+//
+//    Input  : Marvellous   xyz      
+//
+//    Output : true         false
+//               
+// 
+//////////////////////////////////////////////////////////////////////////////////////////
+
+//////////////////////////////////////////////////////////////////////////////////////////
+//
+//  Required header file
+//
+//////////////////////////////////////////////////////////////////////////////////////////
+
+#include <stdio.h>
+#include <stdbool.h>
+
+//////////////////////////////////////////////////////////////////////////////////////////
+//
+//  Function Name : ChkVowel
+//  Description   : Function returns true if string contains vowel.
+//  Input         : str
+//  Output        : bool
+//  Author        : Anurag Gopal Satbhai
+//  Date          : 07/12/25
+//
+//////////////////////////////////////////////////////////////////////////////////////////
+
+int ChkVowel(char *str)
+{
+    bool bFlag = false;   
+
+    while(*str != '\0')
+    {
+        
+        if((*str == 'a') || (*str == 'e') || (*str == 'i') || (*str == 'o') || (*str == 'u'))
+        {
+            bFlag = true;
+        }
+        str++;
+
+    }
+    
+    return bFlag;
+
+}        
+
+//////////////////////////////////////////////////////////////////////////////////////////
+//
+//  Entry point function for the application
+//
+//////////////////////////////////////////////////////////////////////////////////////////
+
+int main()
+{
+    char arr[20];
+    bool bRet = false;
+    printf("This program designed for checking small case vowels.\n");
+
+    printf("Enter your string : \n");
+    scanf("%[^\n]s",arr);
+
+    bRet = ChkVowel(arr);
+
+    if(bRet == true)
+    {
+        printf("Contains vowel.");
+    }
+    else
+    {
+        printf("There is no vowel.");
+    }
+
+    return 0;
+}
+
+////////////////////////////////////////////////////////////////////////////////////////// 
+//
+//  This program designed for checking small case vowels.
+//  Enter your string :
+//  Anurag
+//  Contains vowel.
+//
+//  This program designed for checking small case vowels.
+//  Enter your string :
+//  xyz
+//  There is no vowel.
+//
+//////////////////////////////////////////////////////////////////////////////////////////
